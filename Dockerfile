@@ -14,10 +14,10 @@ RUN sudo apt-get update && sudo apt-get install -y \
   && sudo ldconfig \
   && sudo rm -rf /var/lib/apt/lists/*
 
-# install mujoco
-RUN mkdir -p ${HOME}/.mujoco \
-    && wget https://mujoco.org/download/mujoco210-linux-x86_64.tar.gz -O mujoco.tar.gz \
-    && tar -xf mujoco.tar.gz -C ${HOME}/.mujoco \
+# install mujoco  https://github.com/google-deepmind/mujoco/releases/download/2.3.7/mujoco-2.3.7-linux-x86_64.tar.gz
+RUN mkdir -p ${HOME}/mujoco \
+    && wget https://github.com/google-deepmind/mujoco/releases/download/2.3.7/mujoco-2.3.7-linux-x86_64.tar.gz -O mujoco.tar.gz \
+    && tar -xf mujoco.tar.gz -C ${HOME}/mujoco \
     && rm mujoco.tar.gz
 
 RUN pip install mujoco
