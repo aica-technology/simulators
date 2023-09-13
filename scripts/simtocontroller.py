@@ -17,7 +17,7 @@ context = zmq.Context(1)
 publisher = network.configure_publisher(context, '*:6000', True)  
 subscriber = network.configure_subscriber(context, '*:6001', True) 
 
-model = mujoco.MjModel.from_xml_path('universal_robots_ur5e/scene.xml')
+model = mujoco.MjModel.from_xml_path('../universal_robots_ur5e/scene.xml')
 data = mujoco.MjData(model)
 
 state_output = JointState().Random("robot", ['ur5e_' + model.joint(q).name for q in range(model.nq)])

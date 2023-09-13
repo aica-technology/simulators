@@ -6,7 +6,7 @@ from mujoco import viewer
 
 from state_representation import JointState
 
-model = mujoco.MjModel.from_xml_path('universal_robots_ur5e/scene.xml')
+model = mujoco.MjModel.from_xml_path('../universal_robots_ur5e/scene.xml')
 data = mujoco.MjData(model)
 
 state_output = JointState().Random("robot", ['ur5e_' + model.joint(q).name for q in range(model.nq)])
