@@ -3,6 +3,7 @@ This program connects with controllertosim via localhost.
 Publishes state information and subscribes control input to and from controllertosim respectively
 Launches MuJoCo viewer and visualises robot state
 """
+import signal, sys, time, subprocess
 from threading import Thread
 
 import mujoco
@@ -58,3 +59,22 @@ viewer.launch(model, data)
 
 run_thread = False
 t.join()
+
+# def graceful_exit(signum, frame):
+#     print("Received SIGINT. Cleaning up and exiting gracefully.")
+#     # Add your cleanup code here (if any
+#     sys.exit(0)
+
+# # Register the signal handler
+# signal.signal(signal.SIGINT, graceful_exit)
+# viewer_process = subprocess.Popen(viewer.launch(model, data))
+
+# try:
+#     viewer_process.wait()
+#     run_thread = False
+#     t.join()
+# finally:
+#     # Terminate the external subprocess (forcefully)
+#     if viewer_process:
+#         viewer_process.kill()
+

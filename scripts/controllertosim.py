@@ -34,12 +34,12 @@ model = Robot()
 control_input = JointState().Random("robot", ['ur5e_' + model.joint[q] for q in range(model.nq)])
 
 i=0
-print_state_output = False # for debug, prints state of robot occasionally
+print_state_output = True # for debug, prints state of robot occasionally
 while True:
     for u in range(model.nu):
         control_input.set_velocity(0, u)
-        if u == 0:
-            control_input.set_velocity(-2, u)
+        # if u == 0:
+        #     control_input.set_velocity(-2, u)
 
     publisher.send(clproto.encode(control_input, clproto.MessageType.JOINT_STATE_MESSAGE))
     message = receive_encoded_state(subscriber)
