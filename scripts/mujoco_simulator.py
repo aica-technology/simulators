@@ -12,6 +12,7 @@ import zmq, clproto
 from state_representation import JointState
 
 from network_interfaces.zmq import network
+from utilities import receive_encoded_state
 
 context = zmq.Context(1)
 publisher = network.configure_publisher(context, '*:6000', True)  
@@ -20,18 +21,7 @@ subscriber = network.configure_subscriber(context, '*:6001', True)
 model = mujoco.MjModel.from_xml_path('../universal_robots_ur5e/scene.xml')
 data = mujoco.MjData(model)
 
-state_output = JointState().Random("robot", ['ur5e_' + model.joint(q).name for q in range(model.nq)])
-
-def receive_encoded_state(subscriber, wait=False):
-    # tries to receive message via connection
-    zmq_flag = 0 if wait else zmq.DONTWAIT
-    try:
-        message = subscriber.recv(zmq_flag)
-    except zmq.error.Again:
-        return None
-
-    if message:
-        return message
+state_output = JointState().Zero("robot", ['ur5e_' + model.joint(q).name for q in range(model.nq)])
 
 def communication_loop(run):
     # runs continuously, to write command input into mujoco
