@@ -25,8 +25,8 @@ data = mujoco.MjData(model)
 state_output = JointState().Zero("robot", ['ur5e_' + model.joint(q).name for q in range(model.nq)])
 
 def communication_loop(run):
-    # runs continuously, to write command input into mujoco
-    # and to pubsub from controllertosim
+    # runs continuously, to write command input into mujoco 
+    # from a zmq subscriber and send state to a publisher
     while run:
         for q in range(model.nq):
             state_output.set_position(data.qpos[q], q)
