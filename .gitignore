@@ -1,0 +1,5 @@
+.vscode
+MUJOCO_LOG.TXT
+MJDATA.TXT
+MJMODEL.TXT
+__pycache__
