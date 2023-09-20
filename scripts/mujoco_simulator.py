@@ -15,9 +15,11 @@ from state_representation import JointState
 from network_interfaces.zmq import network
 from utilities import receive_encoded_state
 
+debug_forcetorque = True
+
 context = zmq.Context(1)
 publisher = network.configure_publisher(context, '*:6000', True)  
-subscriber = network.configure_subscriber(context, '*:6001', True) 
+subscriber = network.configure_subscriber(context, '*:6001', True)
 
 model = mujoco.MjModel.from_xml_path('../universal_robots_ur5e/scene.xml')
 data = mujoco.MjData(model)
@@ -27,6 +29,7 @@ state_output = JointState().Zero("robot", ['ur5e_' + model.joint(q).name for q i
 def communication_loop(run):
     # runs continuously, to write command input into mujoco 
     # from a zmq subscriber and send state to a publisher
+    i=0
     while run:
         for q in range(model.nq):
             state_output.set_position(data.qpos[q], q)
@@ -40,6 +43,12 @@ def communication_loop(run):
             if command:
                 for u in range(model.nu):
                     data.ctrl[u] = command.get_velocity(u)
+        # prints forces in x, y, z and torques about x, y, z            
+        if debug_forcetorque:
+            i+=1
+            if i % 30000 == 0: 
+                print(int(i/30000), *data.sensor("ft_force").data, *data.sensor("ft_torque").data)
+
 
 run_thread = True
 t = Thread(target=communication_loop, args=[run_thread])
@@ -49,22 +58,3 @@ viewer.launch(model, data)
 
 run_thread = False
 t.join()
-
-# def graceful_exit(signum, frame):
-#     print("Received SIGINT. Cleaning up and exiting gracefully.")
-#     # Add your cleanup code here (if any
-#     sys.exit(0)
-
-# # Register the signal handler
-# signal.signal(signal.SIGINT, graceful_exit)
-# viewer_process = subprocess.Popen(viewer.launch(model, data))
-
-# try:
-#     viewer_process.wait()
-#     run_thread = False
-#     t.join()
-# finally:
-#     # Terminate the external subprocess (forcefully)
-#     if viewer_process:
-#         viewer_process.kill()
-
