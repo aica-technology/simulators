@@ -18,7 +18,9 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "eamodio.gitlens"
+        "eamodio.gitlens",
+        "ms-python.pylint",
+        "ms-python.autopep8"
       ]
     }
   },
