@@ -6,8 +6,6 @@
 `python3 mujoco_simulator.py`
 
 ## To load pick and place configuration
-Scroll down to simulation on the left side, click *0* next to *Key*.
-
 Currently, we can print forces and torques by setting debug_forcetorque to true in mujoco_simulator.py.
 
 The debug prints: message number; forces in x,y,z; torques about x,y,z.

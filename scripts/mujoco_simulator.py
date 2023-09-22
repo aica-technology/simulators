@@ -3,7 +3,7 @@ This program connects with controllertosim via localhost.
 Publishes state information and subscribes control input to and from controllertosim respectively
 Launches MuJoCo viewer and visualises robot state
 """
-import signal, sys, time, subprocess
+import os
 from threading import Thread
 
 import mujoco
@@ -21,7 +21,8 @@ context = zmq.Context(1)
 publisher = network.configure_publisher(context, '*:6000', True)  
 subscriber = network.configure_subscriber(context, '*:6001', True)
 
-model = mujoco.MjModel.from_xml_path('../universal_robots_ur5e/scene.xml')
+# script_dir = os.path.abspath( os.path.dirname('universal_robots_ur5e/scene.xml') )
+model = mujoco.MjModel.from_xml_path('/home/ros2/.devcontainer/universal_robots_ur5e/scene.xml')
 data = mujoco.MjData(model)
 
 state_output = JointState().Zero("robot", ['ur5e_' + model.joint(q).name for q in range(model.nq)])
@@ -54,6 +55,7 @@ run_thread = True
 t = Thread(target=communication_loop, args=[run_thread])
 t.start()
 
+mujoco.mj_resetDataKeyframe(model, data, 0)
 viewer.launch(model, data)
 
 run_thread = False
