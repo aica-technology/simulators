@@ -1,33 +1,4 @@
 {
-  "name": "simulators",
-  "privileged": true,
-  "remoteUser": "ros2",
-  "build": {
-    "dockerfile": "../Dockerfile",
-    "context": ".."
-  },
-  "workspaceMount": "source=${localWorkspaceFolder},target=/home/ros2/.devcontainer,type=bind,consistency=cached",
-  "workspaceFolder": "/home/ros2/.devcontainer",
-  "mounts": [
-    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached",
-    "source=/dev/dri,target=/dev/dri,type=bind,consistency=cached"
-  ],
-  "containerEnv": {
-    "DISPLAY": "unix:0"
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "eamodio.gitlens",
-        "ms-python.pylint",
-        "ms-python.autopep8"
-      ]
-    }
-  },
-  "runArgs": [
-    "--net=host",
-    "-e", "DISPLAY=${localEnv:DISPLAY}"
-  ]
     "name": "simulators",
     "privileged": true,
     "remoteUser": "ros2",
@@ -54,8 +25,7 @@
             "extensions": [
                 "eamodio.gitlens",
                 "ms-python.pylint",
-                "ms-python.autopep8",
-                "ms-python.isort"
+                "ms-python.autopep8"
             ]
         }
     },
