@@ -21,8 +21,8 @@ context = zmq.Context(1)
 publisher = network.configure_publisher(context, '*:6000', True)  
 subscriber = network.configure_subscriber(context, '*:6001', True)
 
-# script_dir = os.path.abspath( os.path.dirname('universal_robots_ur5e/scene.xml') )
-model = mujoco.MjModel.from_xml_path('/home/ros2/.devcontainer/universal_robots_ur5e/scene.xml')
+script_dir = os.path.abspath( os.path.dirname( __file__ ) )
+model = mujoco.MjModel.from_xml_path(os.path.join(script_dir, os.pardir, "universal_robots_ur5e", "scene.xml"))
 data = mujoco.MjData(model)
 
 state_output = JointState().Zero("robot", ['ur5e_' + model.joint(q).name for q in range(model.nq)])
