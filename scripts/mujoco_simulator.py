@@ -15,7 +15,7 @@ from state_representation import JointState
 from network_interfaces.zmq import network
 from utilities import receive_encoded_state
 
-debug_forcetorque = True
+debug_forcetorque = False
 
 context = zmq.Context(1)
 publisher = network.configure_publisher(context, '*:6000', True)  
