@@ -8,7 +8,7 @@
         "args": {
             "ROS2_VERSION": "humble",
             "CL_VERSION": "v7.2.0",
-            "NETIF_VERSION": "v1.4.1"
+            "NETIF_VERSION": "v2.0.1"
         }
     },
     "workspaceMount": "source=${localWorkspaceFolder},target=/home/ros2/.devcontainer,type=bind,consistency=cached",

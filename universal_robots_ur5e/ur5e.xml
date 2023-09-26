@@ -112,8 +112,8 @@
                   <geom material="linkgray" mesh="wrist3" class="visual"/>
                   <geom class="eef_collision" pos="0 0.08 0" quat="1 1 0 0" size="0.04 0.02"/>
                   <site name="attachment_site" pos="0 0.1 0" quat="1 -1 0 0"/>
-                  <body name="pp_object" pos="0 0.1 0" quat="0 0 1 0">
-                    <geom type="cylinder" condim="6" size="0.1" fromto="0 0 0 0 0.1 0"/>
+                  <body name="pp_cylinder" pos="0 0.1 0" quat="0 0 1 0">
+                    <geom type="cylinder" condim="6" size="0.05" fromto="0 0 0 0 0.1 0"/>
                     <site name="sensor_site" pos="0 0 0" quat="0 0 1 1"/>
                     <body name="sensor_frame" pos="0 0.3 0" quat="0 0 1 1">
                     </body>
