@@ -4,59 +4,67 @@ Publishes state information and subscribes control input to and from controllert
 Launches MuJoCo viewer and visualises robot state
 """
 import os
-from threading import Thread
+import signal
+import sys
+import time
 
+import clproto
 import mujoco
-from mujoco import viewer
-
-import zmq, clproto
-from state_representation import JointState
-
+import mujoco.viewer
+import zmq
 from network_interfaces.zmq import network
+from state_representation import JointState
 from utilities import receive_encoded_state
 
-debug_forcetorque = False
 
-context = zmq.Context(1)
-publisher = network.configure_publisher(context, '*:6000', True)  
-subscriber = network.configure_subscriber(context, '*:6001', True)
+def signal_handler(sig, frame):
+    sys.exit(0)
 
-script_dir = os.path.abspath( os.path.dirname( __file__ ) )
-model = mujoco.MjModel.from_xml_path(os.path.join(script_dir, os.pardir, "universal_robots_ur5e", "scene.xml"))
-data = mujoco.MjData(model)
 
-state_output = JointState().Zero("robot", ['ur5e_' + model.joint(q).name for q in range(model.nq)])
+class Simulator:
+    def __init__(self, xml_path: str):
+        self.model = mujoco.MjModel.from_xml_path(xml_path)
+        self.data = mujoco.MjData(self.model)
 
-def communication_loop(run):
-    # runs continuously, to write command input into mujoco 
-    # from a zmq subscriber and send state to a publisher
-    i=0
-    while run:
-        for q in range(model.nq):
-            state_output.set_position(data.qpos[q], q)
-            state_output.set_velocity(data.qvel[q], q)
+        self._context = zmq.Context(1)
+        self._publisher = network.configure_publisher(self._context, '*:6000', True)
+        self._subscriber = network.configure_subscriber(self._context, '*:6001', True)
+        self._state = JointState().Zero("robot", ['ur5e_' + self.model.joint(q).name for q in range(self.model.nq)])
 
-        publisher.send(clproto.encode(state_output, clproto.MessageType.JOINT_STATE_MESSAGE))
-        message = receive_encoded_state(subscriber)
+    def control_loop(self, mj_model: mujoco.MjModel, mj_data: mujoco.MjData):
+        for q in range(mj_model.nq):
+            self._state.set_position(mj_data.qpos[q], q)
+            self._state.set_velocity(mj_data.qvel[q], q)
+        self._publisher.send(clproto.encode(self._state, clproto.MessageType.JOINT_STATE_MESSAGE))
+        message = receive_encoded_state(self._subscriber)
         if message:
             command = clproto.decode(message)
-        
             if command:
-                for u in range(model.nu):
-                    data.ctrl[u] = command.get_velocity(u)
-        # prints forces in x, y, z and torques about x, y, z            
-        if debug_forcetorque:
-            i+=1
-            if i % 30000 == 0: 
-                print(int(i/30000), *data.sensor("ft_force").data, *data.sensor("ft_torque").data)
+                for u in range(mj_model.nu):
+                    mj_data.ctrl[u] = command.get_velocity(u)
 
 
-run_thread = True
-t = Thread(target=communication_loop, args=[run_thread])
-t.start()
+def main():
+    script_dir = os.path.abspath(os.path.dirname(__file__))
+    sim = Simulator(os.path.join(script_dir, os.pardir, "universal_robots_ur5e", "scene.xml"))
 
-mujoco.mj_resetDataKeyframe(model, data, 0)
-viewer.launch(model, data)
+    mujoco.set_mjcb_control(sim.control_loop)
 
-run_thread = False
-t.join()
+    with mujoco.viewer.launch_passive(sim.model, sim.data) as viewer:
+        mujoco.mj_resetDataKeyframe(sim.model, sim.data, 0)
+        while viewer.is_running():
+            step_start = time.time()
+
+            mujoco.mj_step(sim.model, sim.data)
+            viewer.sync()
+
+            # rudimentary time keeping, will drift relative to wall clock
+            time_until_next_step = sim.model.opt.timestep - (time.time() - step_start)
+            if time_until_next_step > 0:
+                time.sleep(time_until_next_step)
+
+
+if __name__ == "__main__":
+    signal.signal(signal.SIGINT, signal_handler)
+
+    main()

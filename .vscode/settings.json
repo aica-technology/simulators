@@ -1,0 +1,10 @@
+{
+    "python.analysis.typeCheckingMode": "basic",
+    "python.languageServer": "Pylance",
+    "editor.rulers": [
+        120
+    ],
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "autopep8.args": ["--max-line-length", "120", "--experimental"],
+    "pylint.args": ["--generate-members", "--max-line-length", "120", "-d", "C0114", "-d",  "C0115", "-d", "C0116"],
+}
