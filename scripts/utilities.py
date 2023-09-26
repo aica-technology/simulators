@@ -10,3 +10,4 @@ def receive_encoded_state(subscriber, wait=False):
 
     if message:
         return message
+
