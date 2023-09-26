@@ -4,18 +4,18 @@ Publishes state information and subscribes control input to and from controllert
 Launches MuJoCo viewer and visualises robot state
 """
 import os
-import time
-
-import mujoco
-import mujoco.viewer
-
 import signal
 import sys
+import time
 
-import zmq, clproto
+import clproto
+import mujoco
+import mujoco.viewer
+import zmq
 from network_interfaces.zmq import network
 from state_representation import JointState
 from utilities import receive_encoded_state
+
 
 def signal_handler(sig, frame):
     sys.exit(0)
@@ -27,7 +27,7 @@ class Simulator:
         self.data = mujoco.MjData(self.model)
 
         self._context = zmq.Context(1)
-        self._publisher = network.configure_publisher(self._context, '*:6000', True)  
+        self._publisher = network.configure_publisher(self._context, '*:6000', True)
         self._subscriber = network.configure_subscriber(self._context, '*:6001', True)
         self._state = JointState().Zero("robot", ['ur5e_' + self.model.joint(q).name for q in range(self.model.nq)])
 
@@ -45,7 +45,7 @@ class Simulator:
 
 
 def main():
-    script_dir = os.path.abspath( os.path.dirname( __file__ ) )
+    script_dir = os.path.abspath(os.path.dirname(__file__))
     sim = Simulator(os.path.join(script_dir, os.pardir, "universal_robots_ur5e", "scene.xml"))
 
     mujoco.set_mjcb_control(sim.control_loop)

@@ -1,5 +1,6 @@
 import zmq
 
+
 def receive_encoded_state(subscriber, wait=False):
     zmq_flag = 0 if wait else zmq.DONTWAIT
     try:
