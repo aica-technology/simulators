@@ -24,8 +24,10 @@ def signal_handler(sig, frame):
 
 class Simulator:
     def __init__(self, xml_path: str):
-        self.debug_forcetorque = True
+        self.savetofile = False
+        self.debug_forcetorque = False
         self.i = 0
+        self.printinterval = 50
 
         self.model = mujoco.MjModel.from_xml_path(xml_path)
         self.data = mujoco.MjData(self.model)
@@ -35,6 +37,10 @@ class Simulator:
         self._server.open()
 
         self._state = JointState().Zero("robot", ["ur5e_" + self.model.joint(q).name for q in range(self.model.nq)])
+
+        if self.debug_forcetorque:
+            with open("force_torque_readings.txt", "w", encoding="utf-8") as file:
+                file.write("fx,fy,fz,tx,ty,tz" + '\n')
 
     def control_loop(self, mj_model: mujoco.MjModel, mj_data: mujoco.MjData):
         for q in range(mj_model.nq):
@@ -47,10 +53,17 @@ class Simulator:
             if command:
                 for u in range(mj_model.nu):
                     mj_data.ctrl[u] = command.get_velocity(u)
+        force_torque_data = [*mj_data.sensor("ft_force").data, *mj_data.sensor("ft_torque").data]
+        force_torque_data = [-x for x in force_torque_data]
+        
+        if self.savetofile:
+            with open("force_torque_readings.txt", "a", encoding="utf-8") as file:
+                file.write("{},{},{},{},{},{}".format(*force_torque_data) + '\n')
         if self.debug_forcetorque:
-              self.i+=1
-              if self.i % 100 == 0: 
-                  print(int(self.i/100), *mj_data.sensor("ft_force").data, *mj_data.sensor("ft_torque").data)
+            self.i+=1
+            if self.i % self.printinterval == 0:
+                print(int(self.i/self.printinterval), *force_torque_data)
+                  
 
 
 def main():
