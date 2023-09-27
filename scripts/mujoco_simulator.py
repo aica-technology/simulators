@@ -16,8 +16,6 @@ from communication_interfaces.sockets import (ZMQCombinedSocketsConfiguration,
                                               ZMQPublisherSubscriber)
 from state_representation import JointState
 
-from communication_interfaces.sockets import ZMQContext, ZMQCombinedSocketsConfiguration, ZMQPublisherSubscriber
-
 def signal_handler(sig, frame):
     sys.exit(0)
 
