@@ -11,10 +11,10 @@ import time
 import clproto
 import mujoco
 import mujoco.viewer
-import zmq
-from network_interfaces.zmq import network
+from communication_interfaces.sockets import (ZMQCombinedSocketsConfiguration,
+                                              ZMQContext,
+                                              ZMQPublisherSubscriber)
 from state_representation import JointState
-from utilities import receive_encoded_state
 
 
 def signal_handler(sig, frame):
@@ -26,17 +26,18 @@ class Simulator:
         self.model = mujoco.MjModel.from_xml_path(xml_path)
         self.data = mujoco.MjData(self.model)
 
-        self._context = zmq.Context(1)
-        self._publisher = network.configure_publisher(self._context, '*:6000', True)
-        self._subscriber = network.configure_subscriber(self._context, '*:6001', True)
-        self._state = JointState().Zero("robot", ['ur5e_' + self.model.joint(q).name for q in range(self.model.nq)])
+        server_config = ZMQCombinedSocketsConfiguration(ZMQContext(), "*", "5001", "5002", True, True)
+        self._server = ZMQPublisherSubscriber(_server_config)
+        self._server.open()
+
+        self._state = JointState().Zero("robot", ["ur5e_" + self.model.joint(q).name for q in range(self.model.nq)])
 
     def control_loop(self, mj_model: mujoco.MjModel, mj_data: mujoco.MjData):
         for q in range(mj_model.nq):
             self._state.set_position(mj_data.qpos[q], q)
             self._state.set_velocity(mj_data.qvel[q], q)
-        self._publisher.send(clproto.encode(self._state, clproto.MessageType.JOINT_STATE_MESSAGE))
-        message = receive_encoded_state(self._subscriber)
+        self._server.send_bytes(clproto.encode(self._state, clproto.MessageType.JOINT_STATE_MESSAGE))
+        message = self._server.receive_bytes()
         if message:
             command = clproto.decode(message)
             if command:
