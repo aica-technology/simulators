@@ -33,7 +33,7 @@ class Simulator:
         self.data = mujoco.MjData(self.model)
 
         server_config = ZMQCombinedSocketsConfiguration(ZMQContext(), "*", "5001", "5002", True, True)
-        self._server = ZMQPublisherSubscriber(_server_config)
+        self._server = ZMQPublisherSubscriber(server_config)
         self._server.open()
 
         self._state = JointState().Zero("robot", ["ur5e_" + self.model.joint(q).name for q in range(self.model.nq)])
