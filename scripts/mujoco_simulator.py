@@ -29,7 +29,7 @@ class Simulator:
         self.model = mujoco.MjModel.from_xml_path(xml_path)
         self.data = mujoco.MjData(self.model)
 
-        _server_config = ZMQCombinedSocketsConfiguration(ZMQContext(), "*", "5001", "5002", True, True)
+        server_config = ZMQCombinedSocketsConfiguration(ZMQContext(), "*", "5001", "5002", True, True)
         self._server = ZMQPublisherSubscriber(_server_config)
         self._server.open()
 
