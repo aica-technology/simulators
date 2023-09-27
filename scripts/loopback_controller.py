@@ -26,7 +26,7 @@ print_state_output = False  # for debug, prints state of robot occasionally
 while True:
     client.send_bytes(clproto.encode(control_input, clproto.MessageType.JOINT_STATE_MESSAGE))
     message = client.receive_bytes()
-    if message is not None:
+    if message:
         state_output = clproto.decode(message)
         if state_output and print_state_output:
             i+=1
