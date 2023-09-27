@@ -18,7 +18,6 @@ client.open()
 joints = ["shoulder_pan_joint", "shoulder_lift_joint", "elbow_joint", "wrist_1_joint", "wrist_2_joint", "wrist_3_joint"]
 
 control_input = JointState().Zero("robot", ['ur5e_' + joint for joint in joints])
-control_input.set_velocity(0, 0)
 
 i = 0
 print_state_output = False  # for debug, prints state of robot occasionally
