@@ -53,8 +53,9 @@ class Simulator:
             if command:
                 for u in range(mj_model.nu):
                     mj_data.ctrl[u] = command.get_velocity(u)
+
         force_torque_data = [*mj_data.sensor("ft_force").data, *mj_data.sensor("ft_torque").data]
-        force_torque_data = [-x for x in force_torque_data]
+        force_torque_data = [-x for x in force_torque_data] # follow AICA convention for forces
         
         if self.savetofile:
             with open("force_torque_readings.txt", "a", encoding="utf-8") as file:
