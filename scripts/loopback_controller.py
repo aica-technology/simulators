@@ -6,9 +6,10 @@ Subscribes to state information.
 In the future, this will be connected to a controller
 """
 import clproto
+from communication_interfaces.sockets import (ZMQCombinedSocketsConfiguration,
+                                              ZMQContext,
+                                              ZMQPublisherSubscriber)
 from state_representation import JointState
-
-from communication_interfaces.sockets import ZMQContext, ZMQCombinedSocketsConfiguration, ZMQPublisherSubscriber
 
 client_config = ZMQCombinedSocketsConfiguration(ZMQContext(), "127.0.0.1", "5002", "5001", False, False)
 client = ZMQPublisherSubscriber(client_config)
