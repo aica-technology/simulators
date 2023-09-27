@@ -24,6 +24,9 @@ def signal_handler(sig, frame):
 
 class Simulator:
     def __init__(self, xml_path: str):
+        self.debug_forcetorque = True
+        self.i = 0
+
         self.model = mujoco.MjModel.from_xml_path(xml_path)
         self.data = mujoco.MjData(self.model)
 
@@ -44,6 +47,10 @@ class Simulator:
             if command:
                 for u in range(mj_model.nu):
                     mj_data.ctrl[u] = command.get_velocity(u)
+        if self.debug_forcetorque:
+              self.i+=1
+              if self.i % 100 == 0: 
+                  print(int(self.i/100), *mj_data.sensor("ft_force").data, *mj_data.sensor("ft_torque").data)
 
 
 def main():
