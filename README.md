@@ -34,3 +34,6 @@ However, to generate the receptacle:
     <body name="receptacle_cylinder" pos="-0.44 0.145 0">
 ```
 8. Add `<include file="assets/receptacle_cylinder.xml"/>`, for example, at the top of the scene.xml file to include it
+
+### Putting large number of obj files in a folder
+To do this, the include tag needs to be updated. Also, it seems mujoco only accepts 1 mesh directory so if there are multiple directories, then you will have to specify relative to the meshdir. For example `<mesh file="receptacle_cylinder/receptacle_cylinder.obj"/>`.

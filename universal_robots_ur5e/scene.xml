@@ -1,7 +1,7 @@
 <mujoco model="ur5e scene">
 
   <include file="ur5e.xml"/>
-  <include file="assets/receptacle_cylinder.xml"/>
+  <include file="assets/receptacle_cylinder/receptacle_cylinder.xml"/>
 
   <statistic center="0.3 0 0.4" extent="0.8"/>
 
