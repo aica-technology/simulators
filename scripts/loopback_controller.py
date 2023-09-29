@@ -38,12 +38,12 @@ while True:
         if state_output and print_state_output:
             i += 1
             if i % 100 == 0:
-        
+
                 print(state_output)
-                
+
     if wrench_message:
         force_torque_data = clproto.decode(wrench_message)
         if force_torque_data and print_wrench_output:
-            j+=1
+            j += 1
             if j % 100 == 0:
                 print(force_torque_data)

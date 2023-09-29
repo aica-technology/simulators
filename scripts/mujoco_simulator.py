@@ -59,10 +59,10 @@ class Simulator:
                     mj_data.ctrl[u] = command.get_velocity(u)
 
         force_torque_data = [*mj_data.sensor("ft_force").data, *mj_data.sensor("ft_torque").data]
-        force_torque_data = [-x for x in force_torque_data] # follow AICA convention for forces
+        force_torque_data = [-x for x in force_torque_data]  # follow AICA convention for forces
         self._wrench.set_data(force_torque_data)
         self._wrench_pub.send_bytes(clproto.encode(self._wrench, clproto.MessageType.CARTESIAN_WRENCH_MESSAGE))
-        
+
         if self._export_ft:
             with open("force_torque_readings.txt", "a", encoding="utf-8") as file:
                 file.write("{},{},{},{},{},{}".format(*force_torque_data) + '\n')
