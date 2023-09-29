@@ -1,7 +1,7 @@
 # simulators
 
 ## To run
-`cd scripts/python3 mujoco_simulator.py`
+`python3 scripts/mujoco_simulator.py`
 
 ## To load pick and place configuration
 Currently, we can print forces and torques by setting debug_forcetorque to true in mujoco_simulator.py.
