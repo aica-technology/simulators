@@ -1,0 +1,1479 @@
+<mujoco model="receptacle_cylinder">
+  <!-- <compiler meshdir="assets/receptacle_cylinder"/> -->
+  <default>
+    <!-- <default class="visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default> -->
+    <default class="collision_rc">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <mesh file="receptacle_cylinder/receptacle_cylinder.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_0.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_1.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_2.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_3.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_4.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_5.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_6.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_7.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_8.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_9.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_10.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_11.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_12.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_13.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_14.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_15.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_16.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_17.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_18.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_19.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_20.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_21.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_22.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_23.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_24.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_25.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_26.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_27.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_28.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_29.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_30.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_31.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_32.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_33.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_34.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_35.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_36.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_37.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_38.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_39.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_40.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_41.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_42.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_43.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_44.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_45.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_46.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_47.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_48.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_49.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_50.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_51.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_52.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_53.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_54.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_55.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_56.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_57.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_58.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_59.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_60.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_61.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_62.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_63.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_64.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_65.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_66.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_67.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_68.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_69.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_70.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_71.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_72.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_73.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_74.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_75.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_76.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_77.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_78.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_79.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_80.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_81.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_82.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_83.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_84.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_85.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_86.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_87.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_88.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_89.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_90.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_91.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_92.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_93.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_94.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_95.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_96.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_97.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_98.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_99.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_100.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_101.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_102.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_103.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_104.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_105.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_106.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_107.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_108.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_109.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_110.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_111.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_112.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_113.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_114.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_115.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_116.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_117.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_118.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_119.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_120.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_121.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_122.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_123.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_124.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_125.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_126.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_127.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_128.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_129.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_130.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_131.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_132.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_133.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_134.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_135.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_136.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_137.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_138.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_139.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_140.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_141.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_142.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_143.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_144.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_145.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_146.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_147.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_148.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_149.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_150.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_151.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_152.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_153.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_154.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_155.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_156.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_157.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_158.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_159.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_160.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_161.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_162.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_163.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_164.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_165.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_166.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_167.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_168.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_169.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_170.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_171.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_172.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_173.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_174.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_175.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_176.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_177.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_178.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_179.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_180.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_181.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_182.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_183.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_184.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_185.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_186.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_187.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_188.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_189.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_190.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_191.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_192.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_193.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_194.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_195.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_196.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_197.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_198.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_199.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_200.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_201.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_202.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_203.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_204.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_205.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_206.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_207.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_208.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_209.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_210.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_211.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_212.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_213.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_214.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_215.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_216.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_217.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_218.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_219.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_220.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_221.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_222.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_223.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_224.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_225.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_226.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_227.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_228.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_229.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_230.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_231.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_232.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_233.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_234.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_235.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_236.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_237.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_238.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_239.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_240.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_241.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_242.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_243.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_244.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_245.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_246.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_247.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_248.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_249.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_250.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_251.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_252.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_253.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_254.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_255.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_256.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_257.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_258.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_259.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_260.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_261.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_262.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_263.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_264.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_265.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_266.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_267.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_268.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_269.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_270.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_271.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_272.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_273.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_274.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_275.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_276.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_277.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_278.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_279.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_280.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_281.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_282.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_283.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_284.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_285.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_286.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_287.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_288.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_289.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_290.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_291.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_292.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_293.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_294.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_295.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_296.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_297.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_298.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_299.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_300.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_301.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_302.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_303.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_304.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_305.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_306.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_307.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_308.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_309.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_310.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_311.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_312.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_313.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_314.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_315.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_316.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_317.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_318.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_319.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_320.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_321.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_322.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_323.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_324.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_325.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_326.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_327.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_328.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_329.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_330.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_331.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_332.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_333.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_334.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_335.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_336.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_337.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_338.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_339.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_340.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_341.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_342.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_343.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_344.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_345.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_346.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_347.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_348.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_349.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_350.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_351.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_352.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_353.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_354.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_355.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_356.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_357.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_358.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_359.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_360.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_361.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_362.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_363.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_364.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_365.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_366.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_367.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_368.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_369.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_370.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_371.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_372.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_373.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_374.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_375.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_376.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_377.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_378.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_379.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_380.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_381.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_382.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_383.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_384.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_385.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_386.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_387.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_388.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_389.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_390.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_391.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_392.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_393.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_394.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_395.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_396.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_397.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_398.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_399.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_400.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_401.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_402.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_403.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_404.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_405.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_406.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_407.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_408.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_409.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_410.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_411.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_412.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_413.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_414.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_415.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_416.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_417.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_418.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_419.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_420.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_421.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_422.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_423.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_424.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_425.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_426.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_427.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_428.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_429.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_430.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_431.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_432.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_433.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_434.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_435.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_436.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_437.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_438.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_439.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_440.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_441.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_442.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_443.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_444.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_445.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_446.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_447.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_448.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_449.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_450.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_451.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_452.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_453.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_454.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_455.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_456.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_457.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_458.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_459.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_460.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_461.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_462.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_463.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_464.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_465.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_466.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_467.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_468.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_469.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_470.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_471.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_472.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_473.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_474.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_475.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_476.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_477.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_478.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_479.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_480.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_481.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_482.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_483.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_484.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_485.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_486.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_487.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_488.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_489.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_490.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_491.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_492.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_493.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_494.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_495.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_496.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_497.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_498.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_499.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_500.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_501.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_502.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_503.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_504.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_505.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_506.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_507.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_508.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_509.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_510.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_511.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_512.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_513.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_514.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_515.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_516.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_517.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_518.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_519.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_520.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_521.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_522.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_523.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_524.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_525.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_526.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_527.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_528.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_529.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_530.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_531.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_532.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_533.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_534.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_535.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_536.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_537.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_538.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_539.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_540.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_541.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_542.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_543.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_544.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_545.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_546.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_547.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_548.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_549.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_550.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_551.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_552.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_553.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_554.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_555.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_556.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_557.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_558.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_559.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_560.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_561.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_562.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_563.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_564.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_565.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_566.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_567.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_568.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_569.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_570.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_571.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_572.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_573.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_574.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_575.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_576.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_577.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_578.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_579.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_580.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_581.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_582.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_583.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_584.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_585.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_586.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_587.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_588.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_589.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_590.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_591.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_592.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_593.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_594.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_595.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_596.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_597.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_598.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_599.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_600.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_601.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_602.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_603.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_604.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_605.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_606.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_607.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_608.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_609.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_610.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_611.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_612.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_613.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_614.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_615.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_616.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_617.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_618.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_619.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_620.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_621.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_622.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_623.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_624.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_625.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_626.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_627.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_628.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_629.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_630.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_631.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_632.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_633.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_634.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_635.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_636.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_637.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_638.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_639.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_640.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_641.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_642.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_643.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_644.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_645.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_646.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_647.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_648.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_649.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_650.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_651.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_652.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_653.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_654.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_655.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_656.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_657.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_658.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_659.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_660.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_661.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_662.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_663.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_664.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_665.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_666.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_667.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_668.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_669.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_670.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_671.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_672.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_673.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_674.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_675.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_676.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_677.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_678.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_679.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_680.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_681.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_682.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_683.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_684.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_685.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_686.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_687.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_688.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_689.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_690.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_691.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_692.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_693.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_694.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_695.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_696.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_697.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_698.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_699.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_700.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_701.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_702.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_703.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_704.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_705.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_706.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_707.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_708.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_709.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_710.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_711.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_712.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_713.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_714.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_715.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_716.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_717.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_718.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_719.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_720.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_721.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_722.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_723.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_724.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_725.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_726.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_727.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_728.obj"/>
+    <mesh file="receptacle_cylinder/receptacle_cylinder_collision_729.obj"/>
+  </asset>
+  <worldbody>
+    <body name="receptacle_cylinder" pos="-0.44 0.145 0">
+      <geom mesh="receptacle_cylinder" class="visual"/>
+      <geom mesh="receptacle_cylinder_collision_0" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_1" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_2" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_3" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_4" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_5" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_6" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_7" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_8" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_9" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_10" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_11" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_12" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_13" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_14" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_15" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_16" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_17" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_18" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_19" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_20" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_21" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_22" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_23" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_24" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_25" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_26" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_27" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_28" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_29" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_30" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_31" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_32" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_33" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_34" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_35" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_36" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_37" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_38" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_39" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_40" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_41" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_42" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_43" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_44" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_45" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_46" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_47" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_48" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_49" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_50" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_51" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_52" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_53" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_54" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_55" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_56" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_57" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_58" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_59" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_60" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_61" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_62" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_63" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_64" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_65" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_66" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_67" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_68" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_69" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_70" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_71" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_72" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_73" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_74" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_75" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_76" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_77" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_78" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_79" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_80" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_81" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_82" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_83" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_84" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_85" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_86" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_87" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_88" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_89" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_90" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_91" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_92" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_93" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_94" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_95" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_96" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_97" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_98" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_99" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_100" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_101" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_102" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_103" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_104" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_105" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_106" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_107" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_108" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_109" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_110" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_111" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_112" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_113" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_114" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_115" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_116" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_117" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_118" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_119" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_120" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_121" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_122" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_123" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_124" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_125" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_126" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_127" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_128" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_129" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_130" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_131" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_132" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_133" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_134" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_135" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_136" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_137" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_138" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_139" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_140" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_141" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_142" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_143" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_144" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_145" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_146" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_147" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_148" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_149" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_150" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_151" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_152" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_153" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_154" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_155" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_156" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_157" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_158" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_159" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_160" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_161" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_162" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_163" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_164" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_165" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_166" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_167" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_168" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_169" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_170" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_171" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_172" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_173" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_174" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_175" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_176" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_177" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_178" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_179" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_180" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_181" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_182" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_183" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_184" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_185" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_186" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_187" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_188" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_189" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_190" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_191" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_192" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_193" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_194" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_195" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_196" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_197" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_198" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_199" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_200" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_201" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_202" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_203" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_204" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_205" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_206" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_207" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_208" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_209" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_210" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_211" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_212" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_213" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_214" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_215" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_216" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_217" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_218" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_219" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_220" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_221" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_222" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_223" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_224" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_225" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_226" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_227" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_228" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_229" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_230" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_231" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_232" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_233" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_234" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_235" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_236" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_237" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_238" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_239" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_240" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_241" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_242" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_243" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_244" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_245" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_246" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_247" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_248" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_249" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_250" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_251" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_252" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_253" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_254" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_255" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_256" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_257" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_258" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_259" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_260" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_261" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_262" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_263" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_264" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_265" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_266" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_267" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_268" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_269" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_270" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_271" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_272" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_273" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_274" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_275" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_276" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_277" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_278" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_279" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_280" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_281" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_282" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_283" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_284" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_285" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_286" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_287" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_288" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_289" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_290" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_291" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_292" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_293" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_294" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_295" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_296" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_297" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_298" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_299" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_300" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_301" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_302" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_303" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_304" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_305" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_306" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_307" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_308" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_309" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_310" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_311" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_312" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_313" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_314" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_315" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_316" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_317" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_318" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_319" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_320" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_321" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_322" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_323" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_324" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_325" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_326" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_327" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_328" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_329" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_330" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_331" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_332" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_333" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_334" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_335" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_336" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_337" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_338" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_339" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_340" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_341" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_342" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_343" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_344" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_345" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_346" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_347" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_348" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_349" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_350" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_351" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_352" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_353" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_354" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_355" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_356" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_357" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_358" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_359" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_360" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_361" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_362" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_363" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_364" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_365" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_366" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_367" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_368" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_369" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_370" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_371" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_372" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_373" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_374" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_375" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_376" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_377" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_378" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_379" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_380" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_381" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_382" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_383" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_384" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_385" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_386" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_387" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_388" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_389" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_390" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_391" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_392" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_393" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_394" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_395" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_396" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_397" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_398" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_399" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_400" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_401" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_402" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_403" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_404" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_405" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_406" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_407" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_408" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_409" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_410" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_411" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_412" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_413" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_414" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_415" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_416" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_417" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_418" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_419" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_420" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_421" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_422" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_423" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_424" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_425" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_426" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_427" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_428" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_429" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_430" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_431" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_432" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_433" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_434" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_435" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_436" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_437" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_438" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_439" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_440" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_441" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_442" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_443" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_444" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_445" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_446" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_447" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_448" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_449" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_450" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_451" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_452" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_453" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_454" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_455" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_456" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_457" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_458" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_459" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_460" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_461" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_462" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_463" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_464" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_465" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_466" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_467" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_468" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_469" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_470" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_471" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_472" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_473" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_474" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_475" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_476" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_477" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_478" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_479" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_480" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_481" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_482" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_483" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_484" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_485" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_486" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_487" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_488" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_489" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_490" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_491" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_492" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_493" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_494" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_495" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_496" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_497" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_498" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_499" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_500" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_501" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_502" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_503" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_504" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_505" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_506" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_507" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_508" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_509" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_510" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_511" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_512" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_513" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_514" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_515" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_516" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_517" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_518" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_519" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_520" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_521" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_522" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_523" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_524" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_525" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_526" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_527" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_528" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_529" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_530" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_531" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_532" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_533" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_534" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_535" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_536" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_537" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_538" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_539" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_540" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_541" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_542" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_543" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_544" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_545" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_546" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_547" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_548" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_549" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_550" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_551" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_552" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_553" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_554" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_555" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_556" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_557" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_558" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_559" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_560" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_561" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_562" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_563" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_564" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_565" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_566" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_567" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_568" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_569" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_570" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_571" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_572" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_573" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_574" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_575" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_576" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_577" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_578" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_579" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_580" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_581" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_582" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_583" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_584" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_585" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_586" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_587" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_588" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_589" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_590" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_591" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_592" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_593" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_594" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_595" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_596" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_597" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_598" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_599" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_600" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_601" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_602" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_603" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_604" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_605" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_606" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_607" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_608" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_609" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_610" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_611" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_612" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_613" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_614" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_615" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_616" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_617" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_618" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_619" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_620" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_621" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_622" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_623" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_624" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_625" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_626" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_627" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_628" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_629" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_630" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_631" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_632" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_633" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_634" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_635" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_636" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_637" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_638" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_639" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_640" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_641" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_642" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_643" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_644" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_645" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_646" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_647" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_648" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_649" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_650" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_651" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_652" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_653" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_654" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_655" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_656" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_657" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_658" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_659" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_660" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_661" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_662" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_663" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_664" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_665" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_666" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_667" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_668" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_669" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_670" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_671" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_672" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_673" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_674" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_675" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_676" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_677" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_678" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_679" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_680" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_681" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_682" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_683" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_684" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_685" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_686" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_687" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_688" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_689" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_690" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_691" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_692" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_693" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_694" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_695" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_696" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_697" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_698" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_699" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_700" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_701" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_702" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_703" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_704" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_705" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_706" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_707" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_708" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_709" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_710" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_711" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_712" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_713" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_714" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_715" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_716" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_717" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_718" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_719" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_720" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_721" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_722" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_723" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_724" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_725" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_726" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_727" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_728" class="collision_rc"/>
+      <geom mesh="receptacle_cylinder_collision_729" class="collision_rc"/>
+    </body>
+  </worldbody>
+</mujoco>

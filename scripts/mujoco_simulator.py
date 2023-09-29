@@ -22,15 +22,23 @@ def signal_handler(sig, frame):
 
 
 class Simulator:
-    def __init__(self, xml_path: str):
+    def __init__(self, xml_path: str, export_ft=False, debug_ft_interval=0):
         self.model = mujoco.MjModel.from_xml_path(xml_path)
         self.data = mujoco.MjData(self.model)
 
         server_config = ZMQCombinedSocketsConfiguration(ZMQContext(), "*", "5001", "5002", True, True)
-        self._server = ZMQPublisherSubscriber(_server_config)
+        self._server = ZMQPublisherSubscriber(server_config)
         self._server.open()
 
         self._state = JointState().Zero("robot", ["ur5e_" + self.model.joint(q).name for q in range(self.model.nq)])
+
+        self._export_ft = export_ft
+        self._debug_ft_interval = debug_ft_interval
+        self._i = 0
+
+        if self._export_ft:
+            with open("force_torque_readings.txt", "w", encoding="utf-8") as file:
+                file.write("fx,fy,fz,tx,ty,tz" + '\n')
 
     def control_loop(self, mj_model: mujoco.MjModel, mj_data: mujoco.MjData):
         for q in range(mj_model.nq):
@@ -44,10 +52,21 @@ class Simulator:
                 for u in range(mj_model.nu):
                     mj_data.ctrl[u] = command.get_velocity(u)
 
+        force_torque_data = [*mj_data.sensor("ft_force").data, *mj_data.sensor("ft_torque").data]
+        force_torque_data = [-x for x in force_torque_data]  # follow AICA convention for forces
+
+        if self._export_ft:
+            with open("force_torque_readings.txt", "a", encoding="utf-8") as file:
+                file.write("{},{},{},{},{},{}".format(*force_torque_data) + '\n')
+        if self._debug_ft_interval > 0:
+            self._i += 1
+            if self._i % self._debug_ft_interval == 0:
+                print(int(self._i/self._debug_ft_interval), *force_torque_data)
+
 
 def main():
     script_dir = os.path.abspath(os.path.dirname(__file__))
-    sim = Simulator(os.path.join(script_dir, os.pardir, "universal_robots_ur5e", "scene.xml"))
+    sim = Simulator(os.path.join(script_dir, os.pardir, "universal_robots_ur5e", "scene.xml"), False, 0)
 
     mujoco.set_mjcb_control(sim.control_loop)
 

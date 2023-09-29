@@ -3,3 +3,4 @@ MJDATA.TXT
 MJMODEL.TXT
 __pycache__
 data
+force_torque_readings.txt
