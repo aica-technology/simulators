@@ -137,8 +137,8 @@
   </actuator>
 
   <sensor>
-    <force name="ft_force" site="sensor_site_parent"/>
-    <torque name="ft_torque" site="sensor_site_parent"/>
+    <force name="ft_force" site="sensor_site_child"/>
+    <torque name="ft_torque" site="sensor_site_child"/>
   </sensor>
 
   <keyframe>
