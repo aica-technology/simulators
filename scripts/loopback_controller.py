@@ -38,7 +38,6 @@ while True:
         if state_output and print_state_output:
             i += 1
             if i % 100 == 0:
-
                 print(state_output)
 
     if wrench_message:

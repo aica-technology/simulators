@@ -36,7 +36,7 @@ class Simulator:
         self._server.open()
 
         self._state = JointState().Zero("robot", ["ur5e_" + self.model.joint(q).name for q in range(self.model.nq)])
-        self._wrench = CartesianWrench().Zero("tool")
+        self._wrench = CartesianWrench().Zero("tcp_fts_sensor")
 
         self._export_ft = export_ft
         self._debug_ft_interval = debug_ft_interval
