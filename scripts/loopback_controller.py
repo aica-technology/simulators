@@ -28,6 +28,6 @@ while True:
     if message:
         state_output = clproto.decode(message)
         if state_output and print_state_output:
-            i+=1
+            i += 1
             if i % 100 == 0:
                 print(state_output)

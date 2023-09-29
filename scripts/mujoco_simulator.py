@@ -16,12 +16,13 @@ from communication_interfaces.sockets import (ZMQCombinedSocketsConfiguration,
                                               ZMQPublisherSubscriber)
 from state_representation import JointState
 
+
 def signal_handler(sig, frame):
     sys.exit(0)
 
 
 class Simulator:
-    def __init__(self, xml_path: str, export_ft = False, debug_ft_interval = 0):
+    def __init__(self, xml_path: str, export_ft=False, debug_ft_interval=0):
         self.model = mujoco.MjModel.from_xml_path(xml_path)
         self.data = mujoco.MjData(self.model)
 
@@ -52,16 +53,15 @@ class Simulator:
                     mj_data.ctrl[u] = command.get_velocity(u)
 
         force_torque_data = [*mj_data.sensor("ft_force").data, *mj_data.sensor("ft_torque").data]
-        force_torque_data = [-x for x in force_torque_data] # follow AICA convention for forces
-        
+        force_torque_data = [-x for x in force_torque_data]  # follow AICA convention for forces
+
         if self._export_ft:
             with open("force_torque_readings.txt", "a", encoding="utf-8") as file:
                 file.write("{},{},{},{},{},{}".format(*force_torque_data) + '\n')
         if self._debug_ft_interval > 0:
-            self._i+=1
+            self._i += 1
             if self._i % self._debug_ft_interval == 0:
                 print(int(self._i/self._debug_ft_interval), *force_torque_data)
-                  
 
 
 def main():
