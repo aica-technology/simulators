@@ -13,8 +13,9 @@ from communication_interfaces.sockets import (ZMQCombinedSocketsConfiguration,
                                               ZMQSubscriber)
 from state_representation import JointState
 
-client_config = ZMQCombinedSocketsConfiguration(ZMQContext(), "127.0.0.1", "5002", "5001", False, False)
-wrench_sub = ZMQSubscriber(ZMQSocketConfiguration(ZMQContext(), "127.0.0.1", "5003", False))
+context = ZMQContext()
+client_config = ZMQCombinedSocketsConfiguration(context, "127.0.0.1", "5002", "5001", False, False)
+wrench_sub = ZMQSubscriber(ZMQSocketConfiguration(context, "127.0.0.1", "5003", False))
 client = ZMQPublisherSubscriber(client_config)
 wrench_sub.open()
 client.open()
