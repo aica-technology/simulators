@@ -6,3 +6,4 @@
 - feat: use passive launch for viewer and register sigint handler (#6)
 - refactor: update to the latest network interfaces (#9)
 - feat(ur5e): Receptacle for pick and place object (#7)
+- feat: Cartesian wrench publisher (#10)

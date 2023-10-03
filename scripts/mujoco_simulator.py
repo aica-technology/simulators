@@ -12,9 +12,10 @@ import clproto
 import mujoco
 import mujoco.viewer
 from communication_interfaces.sockets import (ZMQCombinedSocketsConfiguration,
-                                              ZMQContext,
-                                              ZMQPublisherSubscriber)
-from state_representation import JointState
+                                              ZMQContext, ZMQPublisher,
+                                              ZMQPublisherSubscriber,
+                                              ZMQSocketConfiguration)
+from state_representation import CartesianWrench, JointState
 
 
 def signal_handler(sig, frame):
@@ -26,11 +27,16 @@ class Simulator:
         self.model = mujoco.MjModel.from_xml_path(xml_path)
         self.data = mujoco.MjData(self.model)
 
-        server_config = ZMQCombinedSocketsConfiguration(ZMQContext(), "*", "5001", "5002", True, True)
+        self._context = ZMQContext()
+
+        server_config = ZMQCombinedSocketsConfiguration(self._context, "*", "5001", "5002", True, True)
+        self._wrench_pub = ZMQPublisher(ZMQSocketConfiguration(self._context, "*", "5003", True))
         self._server = ZMQPublisherSubscriber(server_config)
+        self._wrench_pub.open()
         self._server.open()
 
         self._state = JointState().Zero("robot", ["ur5e_" + self.model.joint(q).name for q in range(self.model.nq)])
+        self._wrench = CartesianWrench().Zero("tcp_fts_sensor")
 
         self._export_ft = export_ft
         self._debug_ft_interval = debug_ft_interval
@@ -54,6 +60,8 @@ class Simulator:
 
         force_torque_data = [*mj_data.sensor("ft_force").data, *mj_data.sensor("ft_torque").data]
         force_torque_data = [-x for x in force_torque_data]  # follow AICA convention for forces
+        self._wrench.set_data(force_torque_data)
+        self._wrench_pub.send_bytes(clproto.encode(self._wrench, clproto.MessageType.CARTESIAN_WRENCH_MESSAGE))
 
         if self._export_ft:
             with open("force_torque_readings.txt", "a", encoding="utf-8") as file:
