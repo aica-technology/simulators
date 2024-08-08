@@ -72,7 +72,7 @@ Then click "Enable" and then "Exit" at the bottom left of the screen.
 A touchpad icon labeled "Local" should appear in the top right corner of your simulator. Click on this icon and then
 select "Remote Control."
 
-![Settings](./images/remote_control.png)
+![Remote control](./images/remote_control.png)
 
 After setting the robot to Remote Control mode, turn the robot on by pressing the red button located in the bottom left
 corner of the screen.
@@ -85,6 +85,8 @@ Then press "EXIT." The simulator is now ready to interface with an AICA applicat
 
 In AICA Studio, open the Hardware section and select validate that your URDF have the following plugin and ensure that 
 the IP address in the `robot_ip` field matches the IP address displayed in your terminal.
+
+![Hardware descriptions](./images/hardware_description.png)
 
 ```
 <hardware>
