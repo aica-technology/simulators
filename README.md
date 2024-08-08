@@ -56,10 +56,10 @@ By following that URL, you will be able to see the following page:
 
 ![Home page](./images/homepage.png)
 
+Once you are on the homepage, you need to enable the Remote Control mode in the settings page first. 
+
 Continue by clicking "Connect" and then navigate to the settings page by clicking the burger icon in the top left corner
 of the screen.
-
-Once you are on the homepage, you need to enable the Remote Control mode in the settings page first. 
 
 Click on the "System" tab, then select the "Remote Control" tab.
 
