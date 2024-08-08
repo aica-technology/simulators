@@ -22,6 +22,9 @@ Connecting to a simulator in an AICA application is extremely straightforward. I
 for a specific simulator. For example, as shown in the image below, users can choose the corresponding URDF from the 
 dropdown menu. This selection is related to a specific hardware driver, which also includes the simulator driver.
 
+![URDF Selection](./images/urdf_selection.png)
+
+This makes it extremely easy for the user to switch between a simulated robot driver and an actual robot driver.
 
 # How to run URSIM
 
