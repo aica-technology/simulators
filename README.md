@@ -43,13 +43,13 @@ That script will install and run the URSIM Docker container, and you should see 
 ```
 IP address of the simulator
 
-     172.17.0.2
+     192.168.56.101
 ```
 
 Access the robot's user interface through this URL:
 
 ```
-http://172.17.0.2:6080/vnc.html?host=172.17.0.2&port=6080
+http://192.168.56.101:6080/vnc.html?host=192.168.56.101&port=6080
 ```
 
 By following that URL, you will be able to see the following page:
@@ -91,7 +91,7 @@ the IP address in the `robot_ip` field matches the IP address displayed in your 
 ```
 <hardware>
     <plugin>robot_interface/universal_robots/UniversalRobotsInterface</plugin>
-    <param name="robot_ip">172.17.0.2</param>
+    <param name="robot_ip">192.168.56.101</param>
     <param name="speed_timeout">0.002</param>
     <param name="acceleration_limit">1.0</param>
 </hardware>
