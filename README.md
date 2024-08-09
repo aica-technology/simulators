@@ -35,8 +35,10 @@ To run URSIM, follow these steps:
 3. Execute the following command:
 
 ```sh
-./run.sh
+./run.sh -m robot_model
 ```
+
+Here, `robot_model` refers to the Universal Robots model you wish to simulate.
 
 That script will install and run the URSIM Docker container, and you should see a similar output in your terminal:
 
