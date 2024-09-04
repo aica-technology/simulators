@@ -1,19 +1,25 @@
-
 # How to run URSIM
 
 To run URSIM, follow these steps:
 
 1. Clone this repository.
 2. Navigate to the `ursim` folder.
-3. Execute the following command:
+3. Execute the following command in this folder:
 
 ```sh
-./run.sh -m robot_model
+./run.sh
 ```
 
-Here, `robot_model` refers to the Universal Robots model you wish to simulate.
+This will use the UR5e robot model by default. To simulate a different robot model, use the `-m` flag followed by a
+model specifier. For example, to simulate the UR10e, run the following command:
 
-That script will install and run the URSIM Docker container, and you should see a similar output in your terminal:
+```sh
+./run.sh -m ur10e
+```
+
+Supported robot model specifiers are: `[ur3, ur3e, ur5, ur5e, ur10, ur10e, ur16e, ur20, ur30]`
+
+The script will install and run the URSIM Docker container, and you should see a similar output in your terminal:
 
 ```
 IP address of the simulator
@@ -31,7 +37,7 @@ By following that URL, you will be able to see the following page:
 
 ![Home page](.././images/homepage.png)
 
-Once you are on the homepage, you need to enable the Remote Control mode in the settings page first. 
+Once you are on the homepage, you need to enable the Remote Control mode in the settings page first.
 
 Continue by clicking "Connect" and then navigate to the settings page by clicking the burger icon in the top left corner
 of the screen.
@@ -58,7 +64,9 @@ This will take you to the following page. Press "ON" followed by "START" to acti
 
 Then press "EXIT." The simulator is now ready to interface with an AICA application.
 
-In AICA Studio, open the Hardware section and validate that your URDF have the following plugin and ensure that 
+### Configure the IP address of the robot in AICA Studio
+
+In AICA Studio, open the Hardware section and validate that your URDF has the following plugin and ensure that
 the IP address in the `robot_ip` field matches the IP address displayed in your terminal.
 
 ![Hardware descriptions](.././images/hardware_description.png)
